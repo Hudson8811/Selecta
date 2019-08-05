@@ -1,0 +1,396 @@
+@media screen and (max-width:1300px) {
+    .container {
+        max-width: 661px;
+    }
+
+
+    section>.container>.title {
+        font-size: 36px;
+    }
+
+    .warranty {
+        .container {
+            >.title {
+                margin-bottom: 71px;
+
+            }
+
+            .flex-block {
+
+                margin: 0 -7.5px;
+                max-width: calc(100% + 15px);
+
+                .card {
+                    margin: 0 7.5px;
+                    padding-bottom: 35px;
+                    height: unset;
+                }
+
+                .circle {
+                    width: 90px;
+                    height: 90px;
+
+                    margin-top: -48px;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .title {
+
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.6px;
+                    margin-top: 17px;
+                    margin-bottom: 21px;
+                    display: block;
+                    padding: 0 14px;
+                    letter-spacing: -0.2px;
+                    display: block;
+                    padding: 0 5px;
+                }
+
+                .content {
+
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 17px;
+                    display: block;
+                    padding: 0 14px;
+                }
+            }
+        }
+    }
+
+    .questions {
+        margin-top: 75px;
+        margin-bottom: 73px;
+
+        .title {
+            margin-bottom: 44px;
+        }
+
+        .item {
+            margin-bottom: 15px;
+
+            .head {
+                height: 75px;
+
+                .left {
+                    font-size: 15px;
+                    padding-left: 23px;
+                }
+
+                &:hover {
+                    .left {}
+                }
+
+                .right {
+                    padding-left: 6px;
+                    padding-right: 21px;
+                    min-height: 22px;
+
+                    .view {
+
+                        .eye {
+                            width: 17px;
+                            height: 12px;
+                            margin-right: 5px;
+                        }
+
+                        .text {
+                            font-size: 13px;
+                            margin-right: 17px;
+                        }
+                    }
+
+                    .status {
+                        width: 21px;
+                        height: 21px;
+                    }
+                }
+            }
+
+            .bottom {
+
+
+
+                p {
+                    line-height: 27px;
+                    margin-left: 23px;
+                    margin-right: 40px;
+
+                    &:first-child {
+                        margin-top: 21px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 59px;
+                    }
+                }
+            }
+
+
+        }
+
+
+    }
+
+
+    footer {
+        padding-top: 81px;
+
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            max-height: 190px;
+
+            .flex-col {
+                width: 50%;
+
+                .number {
+                    font-size: 18px;
+
+                    margin-top: 7px;
+                    margin-left: 5px;
+                    margin-bottom: 19px;
+
+                    +.text {
+                        font-size: 13px;
+                        line-height: 26px;
+                        //margin-top: 7px;
+                        margin-left: 5px;
+
+                    }
+                }
+
+                .social {
+                    margin-left: 5px;
+
+                }
+
+                .app {
+                    padding: 0;
+                    margin: 0;
+
+                    >a {
+
+                        &:hover {}
+
+
+                    }
+
+                    .app-store {
+                        width: 146px;
+                        height: 47px;
+                        background-size: 125px 32px;
+                        margin-right: 18px;
+
+                        &:hover {
+                            background-size: 125px 32px;
+                        }
+
+                    }
+
+                    .play-market {
+                        width: 153px;
+                        height: 47px;
+                        background-size: 132px 32px;
+
+                        &:hover {
+                            background-size: 132px 32px;
+                        }
+                    }
+                }
+
+                .logo {
+                    margin-bottom: 63px;
+                }
+
+                .logo+.text,
+                .app+.text {
+                    display: none;
+                }
+
+                .text {
+
+                    a {
+
+                        &:hover {}
+                    }
+                }
+
+                &:nth-child(1) {}
+
+                &:nth-child(2) {
+                    justify-content: flex-start;
+
+                    align-items: flex-start;
+                }
+
+                &:nth-child(3) {
+
+                    .wrap {
+
+                        .social {
+                            max-width: 201px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width:700px) {
+    .container {
+        max-width: calc(100% - 30px);
+    }
+
+
+    section>.container>.title {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 28px;
+    }
+
+    .warranty {
+        .container {
+            >.title {}
+
+            .flex-block {
+
+
+                .card {}
+
+                .circle {
+                    width: 152px;
+                    height: 153px;
+
+                    img {}
+                }
+
+                .title {}
+
+                .content {}
+            }
+        }
+    }
+
+    .questions {
+
+        .title {}
+
+        .item {
+
+            .head {
+
+                .left {}
+
+                &:hover {
+                    .left {}
+                }
+
+                .right {
+
+                    .view {
+
+                        .eye {}
+
+                        .text {}
+                    }
+
+                    .status {}
+                }
+            }
+
+            .bottom {
+
+
+
+                p {
+
+                    &:first-child {}
+
+                    &:last-child {}
+                }
+            }
+
+
+        }
+
+
+    }
+
+
+    footer {
+
+        .container {
+
+            .flex-col {
+
+                .number {
+
+
+                    +.text {}
+                }
+
+                .social {}
+
+                .app {
+
+                    >a {
+
+                        &:hover {}
+
+
+                    }
+
+                    .app-store {
+
+                        &:hover {}
+
+                    }
+
+                    .play-market {
+
+                        &:hover {}
+                    }
+                }
+
+                .logo {}
+
+                .logo+.text,
+                .app+.text {}
+
+                .text {
+
+                    a {
+
+                        &:hover {}
+                    }
+                }
+
+                &:nth-child(1) {}
+
+                &:nth-child(2) {}
+
+                &:nth-child(3) {
+
+                    .wrap {
+
+                        .social {}
+                    }
+                }
+            }
+        }
+    }
+}

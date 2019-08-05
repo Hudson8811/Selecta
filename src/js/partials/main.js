@@ -6,10 +6,26 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(
+$(document).ready(function () {
+
     $('.questions .item .head').click(function () {
-        $(this).siblings('.bottom').stop(true,true).slideToggle(200);
+        $(this).siblings('.bottom').stop(true, true).slideToggle(200);
         $(this).parent().toggleClass('open');
     })
 
-)
+    window.addEventListener("resize", function () {
+        if (window.innerWidth <= 768) {
+            $('.your-slider').slick('unslick');
+            sliderIsLive = false;
+        }
+        else {
+            if (sliderIsLive) {
+                $('.your-slider').slick();
+                sliderIsLive = true;
+            }
+        }
+    });
+
+
+
+});

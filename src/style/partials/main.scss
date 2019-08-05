@@ -16,11 +16,12 @@ body {
 	background: #ffffff;
 }
 
-.container {
+.container{
 	width: 1240px;
 	margin: 0 auto;
 	box-sizing: border-box;
 }
+
 
 #jGrowl {
 	z-index: 999999;
@@ -234,7 +235,8 @@ footer {
 					align-items: center;
 
 					.eye {
-						background: url(../img/eye_closed.png);
+						background: url(../img/eye_closed.png) center no-repeat;
+						background-size: cover;
 						width: 27px;
 						height: 18px;
 						margin-right: 11px;
@@ -304,7 +306,8 @@ footer {
 					.view {
 						.eye {
 
-							background: url(../img/eye_open.png);
+							background: url(../img/eye_open.png) center no-repeat;
+							background-size: cover;
 						}
 
 						.text {
