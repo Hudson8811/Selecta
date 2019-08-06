@@ -63,7 +63,10 @@ header {
 	margin: 0 auto;
 	background: #74c748;
 
-	.logo {}
+	.logo {
+
+		margin-right: 57px;
+	}
 
 	ul {
 		max-width: 691px;
@@ -103,6 +106,7 @@ header {
 			position: relative;
 			align-items: flex-end;
 			z-index: 10;
+			cursor: pointer;
 
 			&::after {
 				content: "";
@@ -111,6 +115,7 @@ header {
 				width: 10px;
 				height: 5px;
 				background: url('../img/arrow-bottom-w.svg');
+				transition-duration: .2s;
 			}
 
 		}
@@ -119,7 +124,7 @@ header {
 
 		.langs {
 			z-index: 0;
-			//	display: none;
+			display: none;
 			position: absolute;
 			top: 18px;
 			padding-top: 19px;
@@ -131,22 +136,71 @@ header {
 			border-radius: 0 0 16px 16px;
 			text-align: center;
 			padding-bottom: 7px;
+			opacity: 0;
 
-			.lang {}
+			.lang:not(.active) {
+				display: block;
+				color: #fff;
+				transition-duration: .2s;
+
+				&:hover {
+					color: #94F8FF;
+				}
+			}
 		}
 
 		&.open {
-			.langs {}
+			.toggle {
+
+				background: #74c748;
+
+				&::after {
+					transform: rotate(-180deg);
+				}
+			}
+
+			.langs {
+				opacity: 1;
+
+				.lang:not(.active) {}
+			}
 
 		}
 
-		.contact {
-			.left {}
 
-			.right {
-				.top {}
 
-				.bottom {}
+	}
+
+	.contact {
+		display: flex;
+		align-items: center;
+		margin-top: 8px;
+		align-self: flex-start;
+		position: relative;
+
+		.left {
+			margin-top: 5px;
+			margin-right: 167px;
+
+			img {}
+		}
+
+		.right {
+			position: absolute;
+			right: -1px;
+			top: 9px;
+
+			.top {
+				color: #ffffff;
+				font-size: 18px;
+				font-weight: 700;
+			}
+
+			.bottom {
+				margin-top: 3px;
+				color: #ffffff;
+				font-size: 15px;
+				font-weight: 400;
 			}
 		}
 	}
@@ -223,7 +277,7 @@ header {
 
 #fancy-watch {
 	width: 1920px;
-	max-width: 95%;
+	max-width: 80%;
 }
 
 .video {

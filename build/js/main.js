@@ -41,6 +41,13 @@ $(document).ready(function () {
         $(this).siblings('.bottom').stop(true, true).slideToggle(200);
         $(this).parent().toggleClass('open');
     })
+
+    $('.lang-toggle .toggle').click(function () {
+        var $this = $(this);
+        $this.siblings('.langs').stop(true, true).slideToggle(200);
+        $this.parent().toggleClass('open');
+    });
+
     /*
         window.addEventListener("resize", function () {
             if (window.innerWidth <= 768) {
