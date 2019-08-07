@@ -37,7 +37,9 @@ body {
 
 
 
-body {}
+body {
+}
+
 
 section>.container>.title {
 
@@ -55,13 +57,17 @@ section>.container>.title {
 
 
 header {
+	z-index: 10;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	width: 1642px;
 	max-width: calc(100% - 30px);
 	margin: 0 auto;
-	background: #74c748;
+	//background: #74c748;
+	position: absolute;
+	left: 0;
+	right: 0;
 
 	.logo {
 
@@ -204,6 +210,23 @@ header {
 			}
 		}
 	}
+}
+
+
+.animation {
+	height: 100vh;
+	svg{
+		height: 100vh !important;
+	}
+}
+#lottie {
+	background-color: #fff;
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	transform: translate3d(0, 0, 0);
+	text-align: center;
+	opacity: 1;
 }
 
 .how-its-work {

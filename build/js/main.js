@@ -48,30 +48,40 @@ $(document).ready(function () {
         $this.parent().toggleClass('open');
     });
 
-    /*
-        window.addEventListener("resize", function () {
-            if (window.innerWidth <= 768) {
-                $('.your-slider').slick('unslick');
-                sliderIsLive = false;
-            }
-            else {
-                if (sliderIsLive) {
-                    $('.your-slider').slick();
-                    sliderIsLive = true;
-                }
-            }
-        });
 
-    */
+    function adaptive_slider() {
+        if (window.innerWidth > 700) {
+            $('.who-will-suit .flex-block').slick('unslick');
+            sliderIsLive = false;
+        }
+        else {
+            if (!sliderIsLive) {
+                $('.who-will-suit .flex-block').slick();
+                sliderIsLive = true;
+            }
+        }
+    };
+
+    window.addEventListener("load", function () {
+        adaptive_slider();
+    });
+
+    window.addEventListener("resize", function () {
+        adaptive_slider();
+    });
+
+
+
+
 
     $(".wrapper .watch").fancybox();
 
 
 
-    $('header ul li a').on( 'click', function(){
+    $('header ul li a').on('click', function () {
         var el = $(this);
         var dest = el.attr('href'); // получаем направление
-        if(dest !== undefined && dest !== '') { // проверяем существование
+        if (dest !== undefined && dest !== '') { // проверяем существование
             $('html').animate({
                 scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
             }, 500 // скорость прокрутки

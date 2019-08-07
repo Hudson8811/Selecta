@@ -56,14 +56,17 @@
             }
 
             .text {
-
                 line-height: 27px;
+                font-family: "Myriad Pro";
+                font-size: 15px;
+                max-width: 587px;
+                margin-top: 23px;
             }
         }
 
 
         .wrapper {
-            margin-top: 57px;
+            margin-top: 55px;
             margin-left: 0;
             background-position-y: top;
             background-position-x: calc(50% + 21px);
@@ -411,7 +414,7 @@
 
 @media screen and (max-width:700px) {
     .container {
-        max-width: calc(100% - 30px);
+        max-width: calc(100% - 21px);
     }
 
 
@@ -419,6 +422,175 @@
         font-size: 22px;
         font-weight: 700;
         line-height: 28px;
+    }
+
+
+    header {
+        margin-top: 29px;
+        flex-wrap: wrap;
+        max-width: calc(100% - 21px);
+
+        .logo {
+            order: -1;
+            min-width: 159px;
+            height: 40px;
+
+            img {}
+        }
+
+        ul {}
+
+        .contact {
+            order: 0;
+
+            .left {
+                margin-right: 0;
+                margin-right: 21px;
+                margin-top: 2px;
+            }
+
+            .right {
+                display: none;
+            }
+        }
+
+        .lang-toggle {
+            width: 100%;
+            order: 1;
+
+            .toggle {
+                width: 58px;
+                height: 22px;
+                margin-left: 50px;
+                margin-top: 13px;
+                border: 1px solid #fff;
+                font-size: 13px;
+                padding-right: 24px;
+
+                &::after {
+                    right: 8px;
+                }
+
+
+            }
+
+
+            .langs {
+
+                margin-left: 50px;
+                width: 58px;
+                border: 1px solid #fff;
+
+                top: 23px;
+                padding-top: 12px;
+                padding-bottom: 4px;
+
+                .lang:not(.active) {
+                    font-size: 13px;
+                }
+            }
+
+
+        }
+    }
+
+    .how-its-work {
+        .container {
+            >.title {
+                margin-top: 40px;
+            }
+
+            .text {
+                display: none;
+            }
+        }
+
+
+        .wrapper {
+            background: unset;
+            height: 254px;
+            margin-top: 23px;
+
+            .tv {
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background: unset;
+                position: relative;
+                max-width: 320px;
+                max-height: 227px;
+                margin: 0 auto;
+            }
+
+            .watch {
+                left: 0;
+                top: 0;
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: relative;
+
+                border-radius: 15px;
+                background: #e1e2e9;
+
+                &:hover {
+                    filter: brightness(.9);
+                }
+            }
+
+            .btn {
+                width: 90px;
+                height: 90px;
+
+                left: calc(50% - 90px / 2 + 1px);
+                top: 69px;
+            }
+
+            .desc {
+                display: none;
+            }
+        }
+    }
+
+    #fancy-watch {
+
+        max-width: 100%;
+        padding: 40px 0 40px 0;
+
+    }
+
+    .who-will-suit {
+        .container {
+            >.title {
+                line-height: 28px;
+                margin-top: 13px;
+                max-width: 215px;
+                margin-bottom: 23px;
+            }
+
+            .flex-block {
+                display: flex;
+                flex-direction: row;
+                .card {
+                    width: 100%;
+                    padding-bottom: 38px;
+                    margin-bottom: 0;
+
+                    .pic {
+                        margin-top: 41px;
+                        margin-bottom: 18px;
+                    }
+
+                    .content {
+                        font-size: 13px;
+                        line-height: 18px;
+                        max-width: 216px;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
     }
 
     .warranty {
