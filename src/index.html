@@ -14,15 +14,15 @@
 
 <body>
 	<header>
-		<div class="logo">
+		<a href="" class="logo">
 			<img src="img/head-logo.png" alt="">
-		</div>
+		</a>
 		<ul>
-			<li>О продукте </li>
-			<li>Для кого</li>
-			<li>Как начать</li>
-			<li>Гарантии</li>
-			<li>Воспрос ответ</li>
+			<li><a href="#about">О продукте</a></li>
+			<li><a href="#wws">Для кого</a></li>
+			<li><a href="">Как начать</a></li>
+			<li><a href="#warranty">Гарантии</a></li>
+			<li><a href="#questions">Воспрос ответ</a></li>
 		</ul>
 		<div class="lang-toggle">
 			<div class="toggle">
@@ -42,7 +42,9 @@
 			</div>
 		</div>
 	</header>
-	<section class="how-its-work">
+
+
+	<section id="about" class="how-its-work">
 		<div class="container">
 			<div class="title">
 				Как <span class="green">это</span> работает?
@@ -56,10 +58,12 @@
 			</div>
 		</div>
 		<div class="wrapper">
-			<a href="#fancy-watch" class="watch">
-				<div class="btn"></div>
-				<div class="desc">Смотреть</div>
-			</a>
+			<div class="tv">
+				<a href="#fancy-watch" class="watch">
+					<div class="btn"></div>
+					<div class="desc">Смотреть</div>
+				</a>
+			</div>
 		</div>
 	</section>
 	<div id="fancy-watch" style="display:none">
@@ -70,7 +74,7 @@
 		</div>
 	</div>
 
-	<section class="who-will-suit">
+	<section id="wws" class="who-will-suit">
 		<div class="container">
 			<div class="title">Кому подойдет
 				наш продукт </div>
@@ -115,7 +119,7 @@
 		</div>
 	</section>
 
-	<section class="warranty">
+	<section id="warranty" class="warranty">
 		<div class="container">
 			<div class="title">Мы гарантируем</div>
 			<div class="flex-block">
@@ -143,7 +147,7 @@
 		</div>
 	</section>
 
-	<section class="questions ">
+	<section id="questions" class="questions ">
 		<div class="container">
 			<div class="title">Вопросы и ответы</div>
 			<div class="item">

@@ -1,11 +1,170 @@
+@media screen and (max-width:1390px) {
+    header {
+        ul {
+            display: none;
+        }
+
+        .contact {
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+    }
+}
+
+
 @media screen and (max-width:1300px) {
     .container {
         max-width: 661px;
+        //width: calc(100% - 30px);
     }
 
+    header {
+        width: 659px;
+        max-width: calc(100% - 30px);
+        margin: 0a;
+
+        .logo {
+            width: 158px;
+            height: 39px;
+            margin-right: 29px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        ul {
+            display: none;
+        }
+
+        .contact {
+            flex-grow: 1;
+            justify-content: flex-end;
+
+            .right .bottom {
+                margin-top: -5px;
+            }
+        }
+
+    }
+
+    .how-its-work {
+        .container {
+            >.title {
+                margin-bottom: 21px;
+            }
+
+            .text {
+
+                line-height: 27px;
+            }
+        }
+
+
+        .wrapper {
+            margin-top: 57px;
+            margin-left: 0;
+            background-position-y: top;
+            background-position-x: calc(50% + 21px);
+            height: 443px;
+
+            .tv {
+                margin-top: 0;
+                top: 3px;
+                left: calc(50% - 284px / 2 + 1px);
+                width: 284px;
+                height: 373px;
+                background: url(../img/tv.png) no-repeat;
+                background-size: 100%;
+                background-position: top calc(50% - 10px);
+                transition-duration: .2s;
+
+            }
+
+            .watch {
+                width: 178px;
+                height: 280px;
+                background-size: 100%;
+                top: 10px;
+                left: calc(50% - 178px / 2);
+            }
+
+            .btn {
+                width: 78px;
+                height: 78px;
+                left: calc(50% - 78px / 2 + 1px);
+                background-size: 100%;
+                top: 100px;
+            }
+
+            .desc {
+                top: 215px;
+                font-size: 16px;
+                left: calc(50% - 84px / 2 + 4px);
+            }
+        }
+    }
 
     section>.container>.title {
         font-size: 36px;
+    }
+
+
+
+    .who-will-suit {
+        .container {
+            >.title {
+                max-width: 365px;
+                line-height: 45px;
+                margin-top: 5px;
+                margin-bottom: 36px;
+                /* max-width: 412px;
+                margin: 0 auto;
+                margin-bottom: 85px;*/
+            }
+
+            .flex-block {
+                margin: 0 -7px;
+
+                .card {
+                    margin: 0 7px;
+                    padding-bottom: 52px;
+                    margin-bottom: 15px;
+                    width: calc(50% - 14px);
+
+
+
+
+                    .pic {
+                        margin-top: 42px;
+                        height: auto;
+                        align-items: flex-start;
+                        height: 106px;
+
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .title {
+                        /* color: #2d2d2d;
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 27px;*/
+                    }
+
+                    .content {
+                        font-family: "Myriad Pro";
+                        font-size: 14px;
+                        line-height: 22px;
+                        max-width: 263px;
+                        margin-top: 18px;
+                    }
+                }
+            }
+        }
     }
 
     .warranty {

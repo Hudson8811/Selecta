@@ -76,7 +76,7 @@ header {
 		justify-content: space-between;
 		list-style: none;
 
-		li {
+		li a {
 
 			color: #ffffff;
 			font-size: 15px;
@@ -220,18 +220,29 @@ header {
 			font-weight: 400;
 			line-height: 25px;
 			margin: 0 auto;
-			margin-bottom: 110px;
+			//	margin-bottom: 110px;
 		}
 	}
 
 	.wrapper {
+		margin-top: 80px;
 		max-width: calc(100vw - 16px);
 		overflow: hidden;
-		height: 430px;
-		background: url(../img/bg-watch.png) center no-repeat;
+		height: 460px;
+		background: url(../img/city.png) top center no-repeat;
 		position: relative;
 
 		margin-left: 16px;
+
+		.tv {
+			position: absolute;
+			margin-top: 30px;
+			left: calc(50% - 328px / 2 - 8px);
+			width: 328px;
+			height: 430px;
+			background: url(../img/tv.png);
+
+		}
 
 		.watch {
 			width: 206px;
@@ -239,7 +250,7 @@ header {
 			border-radius: 10px;
 			position: absolute;
 			top: 11px;
-			left: calc(50% - 206px / 2 - 8px);
+			left: calc(50% - 206px / 2);
 			background: url(../img/green_watch.png);
 			transition-duration: .2s;
 			cursor: pointer;
