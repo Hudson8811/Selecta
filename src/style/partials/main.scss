@@ -37,8 +37,7 @@ body {
 
 
 
-body {
-}
+body {}
 
 
 section>.container>.title {
@@ -215,10 +214,12 @@ header {
 
 .animation {
 	height: 100vh;
-	svg{
+
+	svg {
 		height: 100vh !important;
 	}
 }
+
 #lottie {
 	background-color: #fff;
 	width: 100%;
@@ -735,6 +736,193 @@ footer {
 }
 
 
-.slider-controls{
+.slider-controls {
 	display: none;
+}
+
+
+
+.mobile-app {
+	position: relative;
+	margin-top: 125px;
+
+
+	.card {
+		background: url(../img/bg-slider-cards.png) center no-repeat;
+
+		transition-duration: .2s;
+
+		.content {
+			opacity: 1;
+			transition-duration: .2s;
+		}
+
+		&:not(.front) {
+			.content {
+				opacity: 0;
+			}
+		}
+
+		&.front {
+			position: relative;
+			z-index: 3;
+			width: 1240px;
+			height: 645px;
+			border-radius: 30px;
+		}
+
+		&.center {
+			position: absolute;
+			left: calc(50% - 1182px / 2);
+			top: -15px;
+			z-index: 2;
+			width: 1182px;
+			height: 645px;
+			border-radius: 30px;
+			background-color: #44ab14;
+			opacity: 0.56;
+		}
+
+		&.back {
+			position: absolute;
+			left: calc(50% - 1124px / 2);
+			top: -28px;
+			z-index: 1;
+			width: 1124px;
+			height: 645px;
+			border-radius: 30px;
+			background-color: #44ab14;
+			opacity: 0.42;
+		}
+
+		.pagi {
+			display: flex;
+			align-items: center;
+			margin: 0 -8px;
+			position: absolute;
+			right: 47px;
+			top: 47px;
+
+			.item {
+				width: 17px;
+				height: 17px;
+				background-color: #ffffff;
+				margin: 0 8px;
+				border-radius: 50%;
+
+				&.active {
+					width: 58px;
+					border-radius: 9px;
+					position: relative;
+
+					&:before {
+						content: "";
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 29px;
+						height: 17px;
+						border-radius: 9px;
+						background-color: #f5df5f;
+					}
+				}
+			}
+		}
+
+		.info {
+			margin-left: 105px;
+			padding-top: 122px;
+			max-width: 425px;
+
+			.title {
+				color: #ffffff;
+				font-family: "Open Sans";
+				font-size: 40px;
+				font-weight: 700;
+				line-height: 55px;
+				margin-left: -2px;
+			}
+
+			.description {
+				color: #ffffff;
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 27px;
+				margin-top: 50px;
+			}
+
+			.next {
+				display: flex;
+				color: #ffffff;
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 27px;
+				margin-top: 62px;
+				cursor: pointer;
+
+				.arrow {
+					width: 27px;
+					height: 27px;
+					margin-left: 16px;
+					background-color: #ffffff;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border-radius: 50%;
+				}
+			}
+
+			.stores {
+				display: flex;
+				margin-top: 10px;
+				margin-top: 69px;
+				margin-left: 1px;
+
+				.item {
+					width: 65px;
+					height: 65px;
+					border-radius: 13px;
+
+					margin-right: 24px;
+					background-color: #ffffff;
+
+					//transition-duration: .2s;
+					&:hover {
+						//filter: brightness(0.9);
+						opacity: .8;
+					}
+
+					&.app {
+						background: url(../img/app-bg.png) center no-repeat;
+					}
+
+					&.play {
+						background: url(../img/play-bg.png) center no-repeat #FFF;
+					}
+				}
+			}
+
+
+
+
+		}
+
+		.phone1 {
+			position: absolute;
+			top: 102px;
+			right: 353px;
+
+			img {}
+		}
+
+		.phone2 {
+			position: absolute;
+			top: 158px;
+			right: 14px;
+
+			img {}
+		}
+	}
+
+	.card {}
 }

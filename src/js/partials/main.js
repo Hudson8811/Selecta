@@ -89,4 +89,21 @@ $(document).ready(function () {
         }
         return false;
     });
+
+
+
+    $('.mobile-app .next').click(
+        function () {
+            var $this = $(this);
+            thisCard=$this.closest('.card');
+            console.log(thisCard);
+            card2=thisCard.siblings('.center');
+            card3=thisCard.siblings('.back');
+            thisCard.fadeOut(100);
+            thisCard.fadeIn(100);
+            thisCard.removeClass('front').addClass('back');
+            card2.removeClass('center').addClass('front');
+            card3.removeClass('back').addClass('center');
+        }
+    );
 });
