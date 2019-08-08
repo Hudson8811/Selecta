@@ -572,6 +572,7 @@
             .flex-block {
                 display: flex;
                 flex-direction: row;
+
                 .card {
                     width: 100%;
                     padding-bottom: 38px;
@@ -593,38 +594,110 @@
         }
     }
 
+
+    .slider-controls {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        margin-top: 25px;
+
+        .prev-arrow,
+        .next-arrow {
+            display: block;
+            height: 36px;
+            cursor: pointer;
+
+            &:hover {
+                path {
+                    fill: #45ac15;
+                }
+            }
+        }
+
+        .slider-number {
+            display: block;
+
+            margin: 0 27px;
+            color: #2d2d2d;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 13.5px;
+
+            span {
+                color: #45ac15;
+            }
+        }
+    }
+
     .warranty {
         .container {
-            >.title {}
+            >.title {
+                margin-bottom: 21px;
+            }
 
             .flex-block {
+                flex-wrap: wrap;
+                border-radius: 15px;
+                margin-top: 0;
 
-
-                .card {}
+                .card {
+                    margin-top: 77px;
+                    width: 100%;
+                    padding-bottom: 39px;
+                }
 
                 .circle {
                     width: 152px;
-                    height: 153px;
+                    height: 152px;
+                    margin-top: -75px;
 
                     img {}
                 }
 
-                .title {}
+                .title {
+                    max-width: 200px;
+                    margin-top: 25px;
+                    margin-bottom: 21px;
+                    letter-spacing: 0px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 22px;
+                }
 
-                .content {}
+                .content {
+                    font-family: "Open Sans";
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 18px;
+
+                    max-width: 228px;
+
+                }
             }
         }
     }
 
     .questions {
+        margin-top: 38px;
 
-        .title {}
+        .title {
+            margin-bottom: 23px;
+        }
 
         .item {
 
             .head {
+                height: unset;
 
-                .left {}
+                padding: 15px 0 16px 0;
+
+                .left {
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: .3px;
+                }
 
                 &:hover {
                     .left {}
@@ -639,7 +712,10 @@
                         .text {}
                     }
 
-                    .status {}
+                    .status {
+                        width: 28px;
+                        height: 28px;
+                    }
                 }
             }
 
@@ -648,6 +724,9 @@
 
 
                 p {
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 18px;
 
                     &:first-child {}
 

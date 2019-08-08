@@ -20,15 +20,25 @@ $(document).ready(function () {
         $this.parent().toggleClass('open');
     });
 
+    var slider1 = $('.who-will-suit .flex-block');
+    var slider2 = $('.warranty .flex-block');
+    var sliderNumber1 = $('#slider-controls1 .slider-number');
+    var sliderNumber2 = $('#slider-controls2 .slider-number');
 
     function adaptive_slider() {
         if (window.innerWidth > 700) {
-            $('.who-will-suit .flex-block').slick('unslick');
+            slider1.slick('unslick');
+            slider2.slick('unslick');
             sliderIsLive = false;
         }
         else {
             if (!sliderIsLive) {
-                $('.who-will-suit .flex-block').slick();
+                slider1.slick({
+                    arrows: false,
+                });
+                slider2.slick({
+                    arrows: false,
+                });
                 sliderIsLive = true;
             }
         }
@@ -42,8 +52,26 @@ $(document).ready(function () {
         adaptive_slider();
     });
 
+    slider1.on('init reInit afterChange', function (e, slick, currentSlide) {
+        sliderNumber1.html('<span>' + ((currentSlide ? currentSlide : 0) + 1) + '</span>/' + slick.slideCount);
+    });
+    slider2.on('init reInit afterChange', function (e, slick, currentSlide) {
+        sliderNumber2.html('<span>' + ((currentSlide ? currentSlide : 0) + 1) + '</span>/' + slick.slideCount);
+    });
+    $('#slider-controls1 .prev-arrow').click(function () {
+        slider1.slick('slickPrev');
+    })
 
+    $('#slider-controls1 .next-arrow').click(function () {
+        slider1.slick('slickNext');
+    })
+    $('#slider-controls2 .prev-arrow').click(function () {
+        slider1.slick('slickPrev');
+    })
 
+    $('#slider-controls2 .next-arrow').click(function () {
+        slider1.slick('slickNext');
+    })
 
 
     $(".wrapper .watch").fancybox();
