@@ -94,11 +94,11 @@ $(document).ready(function () {
         slider1.slick('slickNext');
     })
     $('#slider-controls2 .prev-arrow').click(function () {
-        slider1.slick('slickPrev');
+        slider2.slick('slickPrev');
     })
 
     $('#slider-controls2 .next-arrow').click(function () {
-        slider1.slick('slickNext');
+        slider2.slick('slickNext');
     })
 
 
