@@ -98,7 +98,7 @@ $(document).ready(function () {
                         TweenMax.to('.lady-1', 1, {opacity: 1, ease: Linear.easing, delay: 0.5});
                         lady.classList.add('transition');
                         TweenMax.to(lady, 1, {left: 'calc(50% - 150px)', delay: 0.5});
-                        TweenMax.to(ladyText1, 0.5, {scale:1, opacity: 1, display: 'block', ease: Linear.easing, delay: 10.5});
+                        TweenMax.to(ladyText1, 0.5, {scale:1, opacity: 1, display: 'block', ease: Linear.easing, delay: 1.5});
                         TweenMax.to(ladyText, 0.5, {scale:1, opacity: 1, display: 'block', ease: Back.easing, delay: 1.5});
                         setTimeout(function() {lock = 0; step--; lady.classList.remove('transition');}, 2000);
                         break;
@@ -136,9 +136,18 @@ $(document).ready(function () {
         });
 
     } else {
-        alert('mobile');
         $('body').removeClass('blocked');
+
+        alert('Обнаружена мобильная версия, заменить alert на вызов слайдера');
     }
+
+
+    $(window).scroll(function (event) {
+        var top = $(window).scrollTop();
+        if(top == 0 && step < 4 && !mobileCheck() && !$('body').hasClass('blocked')){
+            $('body').addClass('blocked');
+        }
+    });
 });
 
 

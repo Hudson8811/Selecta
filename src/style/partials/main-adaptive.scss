@@ -409,7 +409,7 @@
     .animation {
         .container2{
             width: 1000px;
-            background: url("../img/scroll-icon.png") center 98% no-repeat;
+            background: url("../img/scroll-icon.png") center 96% no-repeat;
             background-size: 45px auto;
         }
         .lady{
@@ -419,9 +419,9 @@
         #main-lady-text{
             width: 400px;
             font-size: 24px;
-            line-height: 35px;
+            line-height: 30px;
             left: calc(50% - 200px);
-            top: calc(100% + 30px);
+            top: calc(100% + 5px);
         }
         .lady-text{
             max-width: 392px;
@@ -456,7 +456,7 @@
         .container2{
             display: none;
         }
-        .slider{
+        .container3{
             display: block;
         }
     }
