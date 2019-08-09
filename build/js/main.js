@@ -8543,6 +8543,8 @@ $(document).ready(function () {
     TweenMax.to(ladyText5, 0.5, {scale:0, opacity: 0, display: 'none', ease: Linear.easing, delay: 13.5});
     setTimeout(function() {lady.classList.add('transition')}, 13000);
     TweenMax.to(lady, 1, {left: 'calc(50% - 150px)', delay: 14.5});
+    TweenMax.to('.lady-3', 1, {opacity: 0, ease: Linear.easing, delay: 14.5});
+    TweenMax.to('.lady-4', 1, {opacity: 1, ease: Linear.easing, delay: 14.5});
     TweenMax.to(appLinks, 0.5, {scale:1, opacity: 1, ease: Linear.easing, delay: 15.5});
 
     setTimeout(function() {$('body').removeClass('blocked')}, 16000);
