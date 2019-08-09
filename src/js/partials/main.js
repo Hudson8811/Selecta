@@ -1,9 +1,9 @@
 $(document).ready(function () {
     $("input[name='phone']").mask(" +7 (999) 999-99-99");
 
-
-
 });
+
+
 
 var sliderIsLive = false;
 
@@ -107,3 +107,4 @@ $(document).ready(function () {
         }
     );
 });
+

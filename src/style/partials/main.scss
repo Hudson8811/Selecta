@@ -14,6 +14,11 @@ body {
 	font-size: 16px;
 	margin: 0;
 	background: #ffffff;
+	&.blocked{
+		position: fixed;
+		width: 100%;
+		overflow-y: scroll;
+	}
 }
 
 .container {
@@ -214,9 +219,141 @@ header {
 
 .animation {
 	height: 100vh;
-
+	overflow: hidden;
 	svg {
 		height: 100vh !important;
+		width: 100%;
+		object-fit: cover;
+	}
+	.container2{
+		width: 1240px;
+		margin: 0 auto;
+		box-sizing: border-box;
+		position: relative;
+		height: 100%;
+		background: url("../img/scroll-icon.png") center 95% no-repeat;
+	}
+
+	.lady{
+		position: absolute;
+		width: 299px;
+		height: 362px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		left: calc(50% - 150px);
+		top: 20%;
+		img{
+			display: block;
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			&.active{
+				opacity: 1;
+			}
+		}
+		&.transition{
+			transition: left 1s linear;
+		}
+	}
+
+	#main-lady-text{
+		width: 480px;
+		text-align: center;
+		color: #ffffff;
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 55px;
+		opacity: 0;
+		transform: scale(0);
+		position: absolute;
+		left: calc(50% - 240px);
+		top: calc(100% + 60px);
+	}
+
+	.lady-text{
+		background: #FFFFFF;
+		max-width: 422px;
+		width: max-content;
+		padding: 34px 35px;
+		box-sizing: border-box;
+		border-radius: 20px 20px 20px 0;
+		position: absolute;
+		transform-origin: left bottom;
+		transform: scale(0);
+		opacity: 0;
+		&.right-text{
+			border-radius: 20px 20px 0;
+			transform-origin: right bottom;
+		}
+		.main{
+			color: #2d2d2d;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 27px;
+		}
+		.second{
+			color: #939393;
+			font-size: 14px;
+			font-style: italic;
+			margin-top: 12px;
+		}
+	}
+	#lady-1-text{
+		right: 0;
+		top: 32%;
+	}
+	#lady-2-text,
+	#lady-4-text{
+		left: 221px;
+		top: 15px;
+	}
+
+	#lady-3-text,
+	#lady-5-text{
+		right: 0;
+		bottom: 5%;
+	}
+
+	.phone-block{
+		width: 717px;
+		height: 415px;
+		right: 0;
+		top: 19%;
+		position: absolute;
+		transform: translateX(2000px);
+		opacity: 0;
+		img{
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	#app-links{
+		width: 375px;
+		left: calc(50% - 188px);
+		bottom: 20%;
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		opacity: 0;
+		transform: scale(0);
+		.app-link{
+			width: 167px;
+			height: 54px;
+			border-radius: 6px;
+			background-color: #ffffff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				display: block;
+				max-width: 98%;
+			}
+		}
 	}
 }
 
@@ -228,6 +365,13 @@ header {
 	transform: translate3d(0, 0, 0);
 	text-align: center;
 	opacity: 1;
+	height: 100%;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+
 }
 
 .how-its-work {

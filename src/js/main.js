@@ -4,7 +4,11 @@
 //= libs/jquery.fancybox.min.js
 //= libs/jquery.maskedinput.min.js
 //= libs/slick.min.js
+//= libs/TweenMax.js
+//= libs/wheel-indicator.js
+
 
 /* my scripts */
 
 //= partials/main.js
+//= partials/animation.js
