@@ -8538,9 +8538,10 @@ $(document).ready(function () {
                 switch (step) {
                     case 1:
                         lock = 1;
+                        lady.classList.add('transition');
                         TweenMax.to(ladyText, 0.5, {scale:2, opacity: 0, display: 'none', ease: Back.easing});
                         TweenMax.to(ladyText1, 0.5, {scale:0, opacity: 0, display: 'none', ease: Linear.easing});
-                        TweenMax.to(lady, 1, {left: 0, ease: Linear.easing, delay: 0.5});
+                        TweenMax.to(lady, 0, {left: 0, delay: 0.5});
                         TweenMax.to('.lady-1', 1, {opacity: 0, ease: Linear.easing, delay: 0.5});
                         TweenMax.to('.lady-2', 1, {opacity: 1, ease: Linear.easing, delay: 0.5});
                         TweenMax.to(ladyText2, 0.5, {scale:1, opacity: 1, ease: Linear.easing, delay: 1.5});
@@ -8566,7 +8567,7 @@ $(document).ready(function () {
                         TweenMax.to(ladyText4, 0.5, {scale:0, opacity: 0, display: 'none', ease: Linear.easing});
                         TweenMax.to(ladyText5, 0.5, {scale:0, opacity: 0, display: 'none', ease: Linear.easing});
                         lady.classList.add('transition');
-                        TweenMax.to(lady, 1, {left: 'calc(50% - 150px)', delay: 1});
+                        TweenMax.to(lady, 0, {left: 'calc(50% - 150px)', delay: 1});
                         TweenMax.to('.lady-3', 1, {opacity: 0, ease: Linear.easing, delay: 1});
                         TweenMax.to('.lady-4', 1, {opacity: 1, ease: Linear.easing, delay: 1});
                         TweenMax.to(appLinks, 0.5, {scale:1, opacity: 1, ease: Linear.easing, delay: 2});
@@ -8587,7 +8588,7 @@ $(document).ready(function () {
                         TweenMax.to('.lady-2', 1, {opacity: 0, ease: Linear.easing, delay: 0.5});
                         TweenMax.to('.lady-1', 1, {opacity: 1, ease: Linear.easing, delay: 0.5});
                         lady.classList.add('transition');
-                        TweenMax.to(lady, 1, {left: 'calc(50% - 150px)', delay: 0.5});
+                        TweenMax.to(lady, 0, {left: 'calc(50% - 150px)', delay: 0.5});
                         TweenMax.to(ladyText1, 0.5, {scale:1, opacity: 1, display: 'block', ease: Linear.easing, delay: 1.5});
                         TweenMax.to(ladyText, 0.5, {scale:1, opacity: 1, display: 'block', ease: Back.easing, delay: 1.5});
                         setTimeout(function() {lock = 0; step--; lady.classList.remove('transition');}, 2000);
@@ -8613,7 +8614,7 @@ $(document).ready(function () {
                         TweenMax.to(appLinks, 0.5, {scale:0, opacity: 0, ease: Linear.easing});
                         TweenMax.to('.lady-4', 1, {opacity: 0, ease: Linear.easing, delay: 0.5});
                         TweenMax.to('.lady-3', 1, {opacity: 1, ease: Linear.easing, delay: 0.5});
-                        TweenMax.to(lady, 1, {left: 0, delay: 0.5});
+                        TweenMax.to(lady, 0, {left: 0, delay: 0.5});
                         TweenMax.to(ladyText5, 0.5, {scale:1, opacity: 1, display: 'block', ease: Linear.easing, delay: 1.5});
                         TweenMax.to(ladyText4, 0.5, {scale:1, opacity: 1, display: 'block', ease: Linear.easing, delay: 1.5});
                         TweenMax.to(phoneBlock2, 0.5, {y:0, opacity: 1, display: 'block', ease: Linear.easing, delay: 1.5});
