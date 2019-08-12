@@ -8595,6 +8595,7 @@ $(document).ready(function () {
                         TweenMax.to(ladyText1, 0.5, {scale:1, opacity: 1, display: 'block', ease: Linear.easing, delay: 1.5});
                         TweenMax.to(ladyText, 0.5, {scale:1, opacity: 1, display: 'block', ease: Back.easing, delay: 1.5});
                         setTimeout(function() {lock = 0; step--; lady.classList.remove('transition');}, 2000);
+                        lottie.play();
                         break;
                     case 3:
                         lock = 1;
