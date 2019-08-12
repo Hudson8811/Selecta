@@ -966,7 +966,6 @@ footer {
 
 		.content {
 			opacity: 1;
-			transition-duration: .2s;
 		}
 
 		&:not(.front) {
@@ -1136,5 +1135,8 @@ footer {
 		}
 	}
 
-	.card {}
+
+	.mobile-app-slider{
+		display: none;
+	}
 }

@@ -97,7 +97,6 @@ $(document).ready(function () {
         function () {
             var $this = $(this);
             thisCard=$this.closest('.card');
-            console.log(thisCard);
             card2=thisCard.siblings('.center');
             card3=thisCard.siblings('.back');
             thisCard.fadeOut(100);

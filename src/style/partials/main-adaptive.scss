@@ -1071,4 +1071,13 @@
             }
         }
     }
+
+    .mobile-app{
+        .card{
+            display: none;
+        }
+        .mobile-app-slider{
+            display: block;
+        }
+    }
 }

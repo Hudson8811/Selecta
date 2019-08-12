@@ -61,6 +61,7 @@ $(document).ready(function () {
                         TweenMax.to(phoneBlock1, 1, {x:0, opacity: 1, ease: Linear.easing, delay: 2});
                         TweenMax.to(ladyText3, 0.5, {scale:1, opacity: 1, ease: Linear.easing, delay: 3});
                         setTimeout(function() {lock = 0; step++;}, 3500);
+                        lottie.stop();
                         break;
                     case 2:
                         lock = 1;
