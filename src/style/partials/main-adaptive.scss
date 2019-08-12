@@ -1,3 +1,10 @@
+@media screen and (max-width:1550px) {
+    header {
+        .contact {
+            width: auto;
+        }
+    }
+}
 @media screen and (max-width:1390px) {
     header {
         ul {
@@ -21,8 +28,7 @@
     header {
         width: 659px;
         max-width: calc(100% - 30px);
-        margin: 0a;
-
+        height: 95px;
         .logo {
             width: 158px;
             height: 39px;
@@ -50,6 +56,7 @@
     }
 
     .how-its-work {
+        margin-top: 75px;
         .container {
             >.title {
                 margin-bottom: 21px;
@@ -116,6 +123,7 @@
 
 
     .who-will-suit {
+        margin-top: 0px;
         .container {
             >.title {
                 max-width: 365px;
@@ -171,6 +179,7 @@
     }
 
     .warranty {
+        margin-top: 77px;
         .container {
             >.title {
                 margin-bottom: 71px;
