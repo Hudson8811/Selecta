@@ -1073,11 +1073,91 @@
     }
 
     .mobile-app{
+        margin-top: 45px;
         .card{
             display: none;
         }
         .mobile-app-slider{
             display: block;
+            background: url("../img/mob-app-slider.jpg") center center no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            padding: 49px 0 31px;
+            box-sizing: border-box;
+            .items{
+                .item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    overflow: hidden;
+                    .title{
+                        text-align: center;
+                        color: #ffffff;
+                        font-size: 22px;
+                        font-weight: 700;
+                        line-height: 28px;
+                        max-width: 80%;
+                    }
+                    .phones{
+                        display: block;
+                        height: 301px;
+                        position: relative;
+                        margin-top: 18px;
+                        width: 100%;
+                        text-align: center;
+
+                        img{
+                            height: 100%;
+                            display: inline-block;margin-left: -20px;
+                        }
+                    }
+                    .stores{
+                        display: flex;
+                        justify-content: center;
+                        margin-top: -28px;
+                        position: relative;
+                        z-index: 1;
+                        .item{
+                            width: 49px;
+                            height: 49px;
+                            border-radius: 8px;
+                            background-color: #ffffff;
+                            &:hover {
+                                opacity: .8;
+                            }
+                            +.item{
+                                margin-left: 10px;
+                            }
+                            &.app {
+                                background: url(../img/app-bg.png) center no-repeat;
+                                background-size: contain;
+                            }
+
+                            &.play {
+                                background: url(../img/play-bg.png) center no-repeat #FFF;
+                                background-size: 27px 30px;
+                            }
+                        }
+                    }
+                    .description{
+                        color: #ffffff;
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 22px;
+                        margin-top: 16px;
+                        text-align: center;
+                        max-width: 80%;
+                    }
+                }
+            }
+            .slider-controls {
+                .slider-number{
+                    color: #ffffff;
+                    span{
+                        color: #FFFFFF;
+                    }
+                }
+            }
         }
     }
 }

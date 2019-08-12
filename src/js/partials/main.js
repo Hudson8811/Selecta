@@ -25,6 +25,9 @@ $(document).ready(function () {
     var sliderNumber1 = $('#slider-controls1 .slider-number');
     var sliderNumber2 = $('#slider-controls2 .slider-number');
 
+    var slider3 = $('.mobile-app-slider .items');
+    var sliderNumber3 = $('#slider-controls3 .slider-number');
+
     function adaptive_slider() {
         if (window.innerWidth > 700) {
             slider1.slick('unslick');
@@ -37,6 +40,9 @@ $(document).ready(function () {
                     arrows: false,
                 });
                 slider2.slick({
+                    arrows: false,
+                });
+                slider3.slick({
                     arrows: false,
                 });
                 sliderIsLive = true;
@@ -58,6 +64,9 @@ $(document).ready(function () {
     slider2.on('init reInit afterChange', function (e, slick, currentSlide) {
         sliderNumber2.html('<span>' + ((currentSlide ? currentSlide : 0) + 1) + '</span>/' + slick.slideCount);
     });
+    slider3.on('init reInit afterChange', function (e, slick, currentSlide) {
+        sliderNumber3.html('<span>' + ((currentSlide ? currentSlide : 0) + 1) + '</span>/' + slick.slideCount);
+    });
     $('#slider-controls1 .prev-arrow').click(function () {
         slider1.slick('slickPrev');
     })
@@ -73,6 +82,13 @@ $(document).ready(function () {
         slider2.slick('slickNext');
     })
 
+    $('#slider-controls3 .prev-arrow').click(function () {
+        slider3.slick('slickPrev');
+    })
+
+    $('#slider-controls3 .next-arrow').click(function () {
+        slider3.slick('slickNext');
+    })
 
     $(".wrapper .watch").fancybox();
 
