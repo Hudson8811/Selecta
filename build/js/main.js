@@ -8490,6 +8490,8 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
 
+    var firstSlider = false;
+
     var params = {
         container: document.getElementById('lottie'),
         renderer: 'svg',
@@ -8503,6 +8505,7 @@ $(document).ready(function () {
 
 
     if (!mobileCheck()){
+
         var lock = 1,
             step = 0;
 
@@ -8628,8 +8631,12 @@ $(document).ready(function () {
 
     } else {
         $('body').removeClass('blocked');
-
-        alert('Обнаружена мобильная версия, заменить alert на вызов слайдера');
+        $('.animation .container2').hide();
+        $('.animation .container3').show();
+        if (!firstSlider) {
+            $('.slider-first-block').slick();
+            firstSlider == true;
+        }
     }
 
 
@@ -8637,6 +8644,21 @@ $(document).ready(function () {
         var top = $(window).scrollTop();
         if(top == 0 && step < 4 && !mobileCheck() && !$('body').hasClass('blocked')){
             $('body').addClass('blocked');
+        }
+    });
+
+    $(window).resize(function (event) {
+        if (!mobileCheck()){
+            $('.animation .container2').show();
+            $('.animation .container3').hide();
+        } else {
+            $('body').removeClass('blocked');
+            $('.animation .container2').hide();
+            $('.animation .container3').show();
+            if (!firstSlider) {
+                $('.slider-first-block').slick();
+                firstSlider == true;
+            }
         }
     });
 });
