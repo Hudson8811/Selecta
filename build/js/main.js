@@ -8489,17 +8489,36 @@ $(document).ready(function () {
 
 
 
+    //init-descctop-slider
+    var all_cards = $('.mobile-app .card');
+    var length = all_cards.length;
+    var pagiContainer = $('.mobile-app .pagi');
+
+    pagiContainer.append('<div class="item active"></div>');
+    for (let index = 1; index < length; index++) {
+        pagiContainer.append('<div class="item"></div>');
+    }
+    var pagi = $('.mobile-app .pagi .item');
     $('.mobile-app .next').click(
         function () {
+
+
             var $this = $(this);
-            thisCard=$this.closest('.card');
-            card2=thisCard.siblings('.center');
-            card3=thisCard.siblings('.back');
-            thisCard.fadeOut(100);
-            thisCard.fadeIn(100);
+            var thisCard = $this.closest('.card');
+            var card2 = thisCard.siblings('.center');
+            var card3 = thisCard.siblings('.back');
+            thisCard.fadeOut(200).fadeIn(200);
+            card2.fadeIn(200);
+            var index = all_cards.index($('.mobile-app .front'));
+            pagi.eq(index).removeClass('active');
+            pagi.eq((index + 1) % length).addClass('active');
+
+            console.log("TCL: $this.siblings().index($this);", all_cards.index($('.mobile-app .front')));
+
             thisCard.removeClass('front').addClass('back');
             card2.removeClass('center').addClass('front');
             card3.removeClass('back').addClass('center');
+
         }
     );
 });

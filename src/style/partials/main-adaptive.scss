@@ -5,6 +5,7 @@
         }
     }
 }
+
 @media screen and (max-width:1390px) {
     header {
         ul {
@@ -26,22 +27,26 @@
     }
 
     .mobile-app {
-        .container{
+        .container {
             position: relative;
         }
-        .card{
+
+        .card {
             background-size: cover;
-            &.front{
+
+            &.front {
                 max-width: 661px;
                 height: 342px;
             }
-            &.center{
+
+            &.center {
                 max-width: 630px;
                 left: 15px;
                 top: -8px;
                 height: 342px;
             }
-            &.back{
+
+            &.back {
                 max-width: 600px;
                 left: 30px;
                 top: -16px;
@@ -86,15 +91,17 @@
                     margin-top: 12px;
                 }
 
-                .next{
+                .next {
                     font-size: 12px;
                     line-height: 21px;
                     margin-top: 11px;
+
                     .arrow {
                         width: 16px;
                         height: 16px;
                         margin-left: 8px;
-                        svg{
+
+                        svg {
                             width: 80%;
                             height: 60%;
                         }
@@ -103,6 +110,7 @@
 
                 .stores {
                     margin-top: 30px;
+
                     .item {
                         width: 35px;
                         height: 35px;
@@ -151,6 +159,7 @@
         width: 659px;
         max-width: calc(100% - 30px);
         height: 95px;
+
         .logo {
             width: 158px;
             height: 39px;
@@ -179,6 +188,7 @@
 
     .how-its-work {
         margin-top: 75px;
+
         .container {
             >.title {
                 margin-bottom: 21px;
@@ -246,6 +256,7 @@
 
     .who-will-suit {
         margin-top: 0px;
+
         .container {
             >.title {
                 max-width: 365px;
@@ -302,6 +313,7 @@
 
     .warranty {
         margin-top: 77px;
+
         .container {
             >.title {
                 margin-bottom: 71px;
@@ -538,56 +550,61 @@
     }
 
     .animation {
-        .container2{
+        .container2 {
             width: 1000px;
             background: url("../img/scroll-icon.svg") center 96% no-repeat;
             background-size: 45px auto;
         }
-        .lady{
+
+        .lady {
             top: 14%;
         }
 
-        #main-lady-text{
+        #main-lady-text {
             width: 400px;
             font-size: 24px;
             line-height: 30px;
             left: calc(50% - 200px);
             top: calc(100% + 5px);
         }
-        .lady-text{
+
+        .lady-text {
             max-width: 392px;
             padding: 19px 20px;
         }
-        #lady-1-text{
+
+        #lady-1-text {
             right: 0;
             top: 25%;
         }
 
         #lady-3-text,
-        #lady-5-text{
+        #lady-5-text {
             right: 0;
             bottom: 5%;
         }
 
-        .phone-block{
+        .phone-block {
             width: 500px;
             height: 290px;
             right: 0;
             top: 14%;
         }
-        #app-links{
+
+        #app-links {
             bottom: 13%;
         }
     }
 }
 
 
-@media screen and (max-width:1000px){
-    .animation{
-        .container2{
+@media screen and (max-width:1000px) {
+    .animation {
+        .container2 {
             display: none;
         }
-        .container3{
+
+        .container3 {
             display: block;
         }
     }
@@ -601,23 +618,28 @@
     }
 
     .animation {
-        .container3{
+        .container3 {
             background-size: 35px auto;
             padding-top: 123px;
-            .slider-first-block{
+
+            .slider-first-block {
                 margin-top: 40px;
-                .slick-prev, .slick-next{
+
+                .slick-prev,
+                .slick-next {
                     background-size: contain;
                     top: 100px;
                     width: 14px;
                     height: 36px;
                 }
-                .item{
-                    .image{
+
+                .item {
+                    .image {
                         width: 187px;
                     }
-                    .label{
-                        max-width:265px;
+
+                    .label {
+                        max-width: 265px;
                         font-size: 22px;
                         line-height: 28px;
                         margin-top: 30px;
@@ -705,6 +727,7 @@
 
     .how-its-work {
         margin-top: 35px;
+
         .container {
             >.title {
                 margin-top: 40px;
@@ -843,6 +866,7 @@
     .warranty {
 
         margin-top: 51px;
+
         .container {
             >.title {
                 margin-bottom: 21px;
@@ -1045,6 +1069,7 @@
                         .social {
                             max-width: 99px;
                             margin: 34px auto 0 auto;
+
                             a {
                                 &:last-child {
                                     display: none;
@@ -1072,25 +1097,29 @@
         }
     }
 
-    .mobile-app{
+    .mobile-app {
         margin-top: 45px;
-        .card{
+
+        .card {
             display: none;
         }
-        .mobile-app-slider{
+
+        .mobile-app-slider {
             display: block;
             background: url("../img/mob-app-slider.jpg") center center no-repeat;
             background-size: cover;
             border-radius: 15px;
             padding: 49px 0 31px;
             box-sizing: border-box;
-            .items{
-                .item{
+
+            .items {
+                .item {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     overflow: hidden;
-                    .title{
+
+                    .title {
                         text-align: center;
                         color: #ffffff;
                         font-size: 22px;
@@ -1098,7 +1127,8 @@
                         line-height: 28px;
                         max-width: 80%;
                     }
-                    .phones{
+
+                    .phones {
                         display: block;
                         height: 301px;
                         position: relative;
@@ -1106,28 +1136,34 @@
                         width: 100%;
                         text-align: center;
 
-                        img{
+                        img {
                             height: 100%;
-                            display: inline-block;margin-left: -20px;
+                            display: inline-block;
+                            margin-left: -20px;
                         }
                     }
-                    .stores{
+
+                    .stores {
                         display: flex;
                         justify-content: center;
                         margin-top: -28px;
                         position: relative;
                         z-index: 1;
-                        .item{
+
+                        .item {
                             width: 49px;
                             height: 49px;
                             border-radius: 8px;
                             background-color: #ffffff;
+
                             &:hover {
                                 opacity: .8;
                             }
-                            +.item{
+
+                            +.item {
                                 margin-left: 10px;
                             }
+
                             &.app {
                                 background: url(../img/app-bg.png) center no-repeat;
                                 background-size: contain;
@@ -1139,7 +1175,8 @@
                             }
                         }
                     }
-                    .description{
+
+                    .description {
                         color: #ffffff;
                         font-size: 16px;
                         font-weight: 600;
@@ -1150,14 +1187,27 @@
                     }
                 }
             }
+
             .slider-controls {
-                .slider-number{
+                .slider-number {
                     color: #ffffff;
-                    span{
+
+                    span {
                         color: #FFFFFF;
                     }
                 }
             }
+        }
+    }
+}
+
+
+#sync2 {
+    .owl-item {
+        &:hover {
+
+            border: 3px solid #ce181f;
+
         }
     }
 }
