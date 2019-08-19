@@ -115,7 +115,7 @@ $(document).ready(function () {
     var pagiContainer = $('.mobile-app .pagi');
 
     pagiContainer.append('<div class="item active"></div>');
-    for (let index = 1hudson88@yandex.ru; index < length; index++) {
+    for (let index = 1; index < length; index++) {
         pagiContainer.append('<div class="item"></div>');
     }
     var pagi = $('.mobile-app .pagi .item');
