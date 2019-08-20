@@ -987,7 +987,7 @@ footer {
 	.container {
 		position: relative;
 
-		.pagi {
+		.csDots {
 			display: flex;
 			align-items: center;
 			margin: 0 -8px;
@@ -1053,9 +1053,13 @@ footer {
 
 			}
 
-			.phone1,
-			.phone2 {
+			.phone1 {
+
 				animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+			}
+
+			.phone2 {
+				animation: slide-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
 			}
 		}
@@ -1108,13 +1112,23 @@ footer {
 				margin-top: 50px;
 			}
 
-			.next {
+			.controls {margin-top: 62px;
+				display: flex;
+				color: #ffffff;
+				font-family: "Open Sans";
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 27px;
+			}
+
+			.next,
+			.prev {
 				display: flex;
 				color: #ffffff;
 				font-size: 18px;
 				font-weight: 600;
 				line-height: 27px;
-				margin-top: 62px;
+
 				cursor: pointer;
 
 				.arrow {
@@ -1127,6 +1141,10 @@ footer {
 					align-items: center;
 					border-radius: 50%;
 				}
+			}
+
+			.prev {
+				transform: rotate(180deg);
 			}
 
 			.stores {

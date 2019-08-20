@@ -112,33 +112,131 @@ $(document).ready(function () {
     //init-descctop-slider
     var all_cards = $('.mobile-app .card');
     var length = all_cards.length;
-    var pagiContainer = $('.mobile-app .pagi');
+    var csDotsContainer = $('.mobile-app .csDots');
 
-    pagiContainer.append('<div class="item active"></div>');
+    csDotsContainer.append('<div class="item active"></div>');
     for (let index = 1; index < length; index++) {
-        pagiContainer.append('<div class="item"></div>');
+        csDotsContainer.append('<div class="item"></div>');
     }
-    var pagi = $('.mobile-app .pagi .item');
+    var csDots = $('.mobile-app .csDots .item');
+
+
+    function change_slide(type = 'next', newIndex = -1) {
+        var index = all_cards.index($('.mobile-app .front'));
+
+        switch (type) {
+            case 'next':
+                newIndex = (index + 1) % length;
+                break;
+            case 'prev':
+                newIndex = (index - 1) >= 0 ? index - 1 : length - 1;
+                break;
+        }
+
+        var thisCard = all_cards.eq((index));
+        var card2 = all_cards.eq((index + 1) % length);
+
+        var card3 = all_cards.eq((newIndex));
+        var card4 = all_cards.eq((newIndex + 1) % length);
+
+        thisCard.attr('class', 'card back');
+        card2.attr('class', 'card back');
+
+        card3.attr('class', 'card front');
+        card4.attr('class', 'card center');
+
+        csDots.eq(index).removeClass('active');
+        csDots.eq(newIndex).addClass('active');
+    }
     $('.mobile-app .next').click(
         function () {
-
-
-            var $this = $(this);
-            var thisCard = $this.closest('.card');
-            var card2 = thisCard.siblings('.center');
-            var card3 = thisCard.siblings('.back');
-            thisCard.fadeOut(200).fadeIn(200);
-            card2.fadeIn(200);
-            var index = all_cards.index($('.mobile-app .front'));
-            pagi.eq(index).removeClass('active');
-            pagi.eq((index + 1) % length).addClass('active');
-
-            console.log("TCL: $this.siblings().index($this);", all_cards.index($('.mobile-app .front')));
-
-            thisCard.removeClass('front').addClass('back');
-            card2.removeClass('center').addClass('front');
-            card3.removeClass('back').addClass('center');
-
+            change_slide();
         }
     );
+    $('.mobile-app .prev').click(
+        function () {
+            change_slide('prev');
+        }
+    );
+    $('.mobile-app .csDots .item').click(
+        function () {
+            var index = csDots.index($(this));
+            change_slide('csDots', index);
+        }
+    );
+
+
+
+
+
+
+
+
+    /*
+        $('.mobile-app .next').click(
+            function () {
+                var $this = $(this);
+                var thisCard = $this.closest('.card');
+                var index = all_cards.index(thisCard);
+                var card2 = all_cards.eq((index+1)%length);
+                var card3 = all_cards.eq((index+2)%length);
+                thisCard.stop().fadeOut(200).fadeIn(200);
+                card2.stop().fadeIn(200);
+                csDots.eq(index).removeClass('active');
+                csDots.eq((index + 1) % length).addClass('active');
+                thisCard.removeClass('front').addClass('back');
+                card2.removeClass('center').addClass('front');
+                card3.removeClass('back').addClass('center');
+
+            }
+        );
+        $('.mobile-app .prev').click(
+            function () {
+                var $this = $(this);
+                var thisCard = $this.closest('.card');
+                var index = all_cards.index(thisCard);
+                var card2 = all_cards.eq((index-1)<0?length+(index-1):index-1);
+                var card3 = all_cards.eq((index+1)%length);
+                thisCard.stop().fadeOut(200).fadeIn(200);
+                card2.stop().fadeIn(200);
+                csDots.eq(index).removeClass('active');
+                csDots.eq((index - 1 )<0?length + (index - 1 ):index-1).addClass('active');
+
+                card3.removeClass('center').addClass('back');
+                thisCard.removeClass('front').addClass('center');
+                card2.removeClass('back').addClass('front');
+
+            }
+        );
+        $('.mobile-app .csDots .item').click(
+            function () {
+                var $this = $(this);
+                var indexClick=csDots.index(this);
+                var index = all_cards.index($this.parent().siblings('.front'));
+
+                console.log("TCL: index", index);
+                console.log("TCL: indexClick", indexClick);
+
+                var thisCard = all_cards.eq((index));
+                var card2 = all_cards.eq((index+1)%length);
+
+                var card3 = all_cards.eq((indexClick));
+                var card4 = all_cards.eq((indexClick+1)%length);
+
+                thisCard.attr('class', 'card back');
+                card2.attr('class', 'card back');
+
+                card3.attr('class', 'card front');
+                card4.attr('class', 'card center');
+
+                csDots.eq(index).removeClass('active');
+                csDots.eq(indexClick).addClass('active');
+
+
+            }
+        );
+    */
+
+
+
 });
