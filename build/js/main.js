@@ -8519,7 +8519,7 @@ $(document).ready(function () {
         var card3 = all_cards.eq((newIndex));
         var card4 = all_cards.eq((newIndex + 1) % length);
 
-        thisCard.attr('class', 'card back');
+        thisCard.fadeOut(200).attr('class', 'card back').fadeIn(200);
         card2.attr('class', 'card back');
 
         card3.attr('class', 'card front');
