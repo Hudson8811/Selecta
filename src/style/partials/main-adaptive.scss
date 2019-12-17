@@ -19,9 +19,16 @@
     }
 
     .animation {
+        .scroll-mouse {
+            width: 45px;
+            height: 58px;
+            left: calc(50% - 45px / 2);
+            background: url(../img/scroll-icon.svg) center no-repeat;
+            background-size: 100% auto;
+        }
         .container2 {
             width: 1000px;
-            background: url("../img/scroll-icon.svg") center 96% no-repeat;
+           /* background: url("../img/scroll-icon.svg") center 96% no-repeat;*/
             background-size: 45px auto;
         }
 
@@ -96,10 +103,7 @@
                 margin: 0 3px;*/
 
                 &.active {
-                    &:before {
-                        width: 16px;
-                        height: 10px;
-                    }
+                   width: 30px;
                 }
             }
         }
@@ -147,7 +151,7 @@
 
                 .controls {
                     margin-top: 11px;
-                    font-size: 16px;
+                    font-size: 14px;
                     line-height: 25px;
 
                 }

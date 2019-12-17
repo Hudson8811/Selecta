@@ -1254,12 +1254,16 @@ footer {
 }
 
 
-header,
-section:not(.animation),
-.mobile-app,
-footer,
-.animation .container2,
-.animation .container3,
-.animation .scroll-mouse {
+header {
+	display: none;
+}
+
+section:not(.animation) {
+	display: none;
+}
+.mobile-app{
+	display: none;
+}
+footer{
 	display: none;
 }
